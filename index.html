@@ -18,6 +18,9 @@
         <link
             href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.css"
             rel="stylesheet" />
+
+        
+
     </head>
     <body>
         <div class="container-fluid">
@@ -52,6 +55,7 @@
             <!-- Formulario  -->
             <div class="row d-flex justify-content-center">
                 <div class="col-md-6 col-12 mt-5">
+
                     <form id="formulario">
 
                         <div class="row mb-4 d-flex justify-content-center">
@@ -61,7 +65,7 @@
                                 <div class="form-outline mb-4">
                                     <input type="number" id="valorPorHora"
                                         step="0.25" required="required"
-                                        class="form-control" />
+                                        class="form-control" name="valorPorHora"/>
                                     <label class="form-label" for="valorPorHora">Valor
                                         por hora ($)</label>
                                 </div>
@@ -74,7 +78,7 @@
                             <div class="col-md-6">
                                 <div class="form-outline mb-4">
                                     <input type="number" id="interfazHoras"
-                                        class="form-control" />
+                                        class="form-control" name="interfazHoras"/>
                                     <label class="form-label" for="interfazHoras">Diseño
                                         de interfaz (horas)</label>
                                 </div>
@@ -85,9 +89,25 @@
                             <div class="col-md-6">
                                 <div class="form-outline mb-4">
                                     <input type="number" id="estructuraHoras"
-                                        class="form-control" />
+                                        class="form-control" name="estructuraHoras" />
                                     <label class="form-label" for="estructuraHoras">Diseño
                                         de Estructura HTML (horas)</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-outline mb-4">
+                                    <input type="number" id="estilizacionHoras"
+                                        class="form-control" name="estilizacionHoras" />
+                                    <label class="form-label" for="estilizacionHoras">Estilizacion CSS (horas)</label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-outline mb-4">
+                                    <input type="number" id="logicaHoras"
+                                        class="form-control" name="logicaHoras" />
+                                    <label class="form-label" for="logicaHoras">Logica con JavaScript (horas)</label>
                                 </div>
                             </div>
 
@@ -97,37 +117,45 @@
                         <!-- Submit button -->
                         <div class="row mb-4 d-flex justify-content-center">
                             <div class="col-md-6">
-                                <button type="submit"
+                                <button type="button" onclick="funcionPredeterminada()" value="submit" name="submit"
                                     class="btn btn-primary btn-block">Calcular</button>
                             </div>
                         </div>
 
+                        <div>
+                   
+
                         <div class="row mb-4 d-flex justify-content-center">
                             <div class="col-md-6">
+                                
                                 <input
                                     class="form-control"
-                                    id="valorTotal"
                                     type="text"
-                                    placeholder="Valor total"
-                                    aria-label="disabled input example"
-                                    disabled />
+                                    id="valorTotal"
+                                    placeholder="ValoTotal"
+                                    disabled="valorTotal"/>
                             </div>
+                            
                         </div>
 
                     </form>
+
+                    
+
                 </div>
             </div>
+
+            
+
         </div>
+
         <!-- MDB -->
         <script
             type="text/javascript"
             src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"></script>
 
         <!-- javascript:src public/javascript/calculadora.js -->
-        <script 
-        type="text/javascript" 
-        src="/public/javascript/calculadora.js"></script>
-
-
+        <script type="application/javascript" src="public/javascript/calculadora.js"></script>
+        
     </body>
 </html>
